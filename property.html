@@ -565,10 +565,12 @@
 
       .prop-main{
         aspect-ratio: auto;
-        height: 65vh;
+        height: clamp(240px, 38svh, 360px);
+        max-height: 360px;
       }
 
       .prop-main img{
+        width: 100%;
         height: 100%;
         object-fit: cover;
       }
