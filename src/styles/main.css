@@ -2670,9 +2670,9 @@ a:hover{ opacity: .92; }
    ============================ */
 
 .blog-hero .mort-hero__content {
-  text-align: center;            /* central content */
+  text-align: center;           
   margin: 0 auto;
-  max-width: 820px;              /* keeps it premium and readable */
+  max-width: 820px;            
 }
 
 .blog-hero .mort-hero__sub {
@@ -3505,7 +3505,7 @@ textarea::placeholder{
    CONTACT — smaller hero (only Contact)
 ===================================== */
 .page--contact .page-hero{
-  height: 260px;
+  height: 300px;
   min-height: 260px;
 }
 
@@ -3622,8 +3622,8 @@ textarea::placeholder{
 ===================================== */
 
 .page--blog .mort-hero{
-  height: 360px;          
-  min-height: 360px;
+  height: 300px;          
+  min-height: 300px;
 }
 
 .page--blog .mort-hero__content{
@@ -3641,12 +3641,10 @@ textarea::placeholder{
   opacity: .75;
 }
 
-/* Subtle divider under hero */
 .page--blog .mort-hero{
   border-bottom: 1px solid rgba(0,0,0,.06);
 }
 
-/* Cleaner blog search for light hero */
 .page--blog .blog-hero__controls .blog-search{
   background: #fff;
   border: 1px solid rgba(0,0,0,.10);
