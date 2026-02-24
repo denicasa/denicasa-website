@@ -135,53 +135,12 @@
     <link rel="stylesheet" href="./src/styles/main.css" />
 
     <style>
-      /* Keep hero branded via mort-hero. Only style the controls. */
       .blog-hero__content{
         text-align: center;
         margin: 0 auto;
         max-width: 820px;
       }
 
-      .blog-hero__controls{
-        margin-top: 22px;
-        display: flex;
-        justify-content: center;
-        animation: heroFadeUp .35s ease both;
-      }
-
-      @keyframes heroFadeUp{
-        from { opacity: 0; transform: translateY(8px); }
-        to   { opacity: 1; transform: translateY(0); }
-      }
-
-      .blog-hero__controls .blog-search{
-        width: 100%;
-        max-width: 520px;
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        padding: 10px 14px;
-
-        border-radius: 999px;
-        border: 1px solid rgba(255,255,255,0.28);
-        background: rgba(255,255,255,0.14);
-        backdrop-filter: blur(10px);
-      }
-
-      .blog-hero__controls .blog-search input{
-        width: 100%;
-        border: none;
-        outline: none;
-        background: transparent;
-        color: #fff;
-        font: inherit;
-      }
-
-      .blog-hero__controls .blog-search input::placeholder{
-        color: rgba(255,255,255,0.85);
-      }
-
-      /* Blog content layout */
       .blog-wrap{
         padding: 34px 0 64px;
       }
@@ -457,12 +416,6 @@
           Market updates, legal changes and curated guides for life and property on the Costa del Sol.
         </p>
 
-        <div class="blog-hero__controls">
-          <div class="blog-search">
-            <span aria-hidden="true">🔎</span>
-            <input id="blogSearch" type="search" placeholder="Search posts by title or excerpt..." />
-          </div>
-        </div>
       </div>
     </section>
 
@@ -588,7 +541,6 @@
       featured: document.getElementById("blogFeatured"),
       list: document.getElementById("blogList"),
       empty: document.getElementById("blogEmpty"),
-      search: document.getElementById("blogSearch"),
       resultsTitle: document.getElementById("resultsTitle"),
       resultsHint: document.getElementById("resultsHint"),
     };
@@ -789,16 +741,6 @@
         els.status.textContent = "Could not load posts. Make sure the sheet is Published to the web and the GID is correct.";
       }
     }
-
-    let searchTimer = null;
-    els.search.addEventListener("input", (e) => {
-      const val = String(e.target.value || "");
-      clearTimeout(searchTimer);
-      searchTimer = setTimeout(() => {
-        ACTIVE_QUERY = val.trim();
-        render();
-      }, 120);
-    });
 
     loadPosts();
   </script>
