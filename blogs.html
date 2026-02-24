@@ -1,0 +1,808 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Preload: Logo -->
+    <link
+      rel="preload"
+      as="image"
+      href="https://pub-ab596235a0b44f2d8d40325dcf71ff74.r2.dev/homepage/logo.png"
+    />
+
+    <!-- Primary SEO -->
+    <title>Blog | Costa del Sol Property Guides & Updates | Deni Casa</title>
+    <meta
+      name="description"
+      content="Market updates, legal changes and seasonal guides for buying, investing and living in Spain — with a focus on the Costa del Sol."
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://denicasa.es/blogs.html" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link
+      rel="apple-touch-icon"
+      href="https://pub-ab596235a0b44f2d8d40325dcf71ff74.r2.dev/homepage/logo.png"
+    />
+
+    <!-- Theme colour -->
+    <meta name="theme-color" content="#998473" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Deni Casa" />
+    <meta property="og:title" content="Deni Casa Blog | Costa del Sol Property Guides & Updates" />
+    <meta
+      property="og:description"
+      content="Market updates, legal changes and seasonal guides for buying, investing and living in Spain — with a focus on the Costa del Sol."
+    />
+    <meta property="og:url" content="https://denicasa.es/blogs.html" />
+    <meta
+      property="og:image"
+      content="https://pub-ab596235a0b44f2d8d40325dcf71ff74.r2.dev/homepage/og-home.jpg"
+    />
+    <meta property="og:image:alt" content="Deni Casa blog – property guides and updates for the Costa del Sol" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_GB" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Deni Casa Blog | Costa del Sol Guides & Updates" />
+    <meta
+      name="twitter:description"
+      content="Market updates, legal changes and seasonal guides for buying, investing and living in Spain — with a focus on the Costa del Sol."
+    />
+    <meta
+      name="twitter:image"
+      content="https://pub-ab596235a0b44f2d8d40325dcf71ff74.r2.dev/homepage/og-home.jpg"
+    />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://denicasa.es/#org",
+          "name": "Deni Casa",
+          "url": "https://denicasa.es/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://pub-ab596235a0b44f2d8d40325dcf71ff74.r2.dev/homepage/logo.png"
+          },
+          "email": "denisa@denicasa.es",
+          "telephone": "+34604110306",
+          "sameAs": [
+            "https://www.instagram.com/deni.casa/",
+            "https://www.facebook.com/denicasarealestate/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://denicasa.es/#website",
+          "url": "https://denicasa.es/",
+          "name": "Deni Casa",
+          "publisher": { "@id": "https://denicasa.es/#org" },
+          "inLanguage": "en",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://denicasa.es/properties.html?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://denicasa.es/blogs.html#webpage",
+          "url": "https://denicasa.es/blogs.html",
+          "name": "Blog | Costa del Sol Property Guides & Updates | Deni Casa",
+          "description": "Market updates, legal changes and seasonal guides for buying, investing and living in Spain — with a focus on the Costa del Sol.",
+          "isPartOf": { "@id": "https://denicasa.es/#website" },
+          "about": { "@id": "https://denicasa.es/#org" },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://pub-ab596235a0b44f2d8d40325dcf71ff74.r2.dev/homepage/og-home.jpg"
+          },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "Blog",
+          "@id": "https://denicasa.es/blogs.html#blog",
+          "name": "The Deni Casa Journal",
+          "url": "https://denicasa.es/blogs.html",
+          "description": "Market updates, legal changes and seasonal guides for buying, investing and living in Spain — with a focus on the Costa del Sol.",
+          "publisher": { "@id": "https://denicasa.es/#org" },
+          "inLanguage": "en"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/styles/main.css" />
+
+    <style>
+      /* Keep hero branded via mort-hero. Only style the controls. */
+      .blog-hero__content{
+        text-align: center;
+        margin: 0 auto;
+        max-width: 820px;
+      }
+
+      .blog-hero__controls{
+        margin-top: 22px;
+        display: flex;
+        justify-content: center;
+        animation: heroFadeUp .35s ease both;
+      }
+
+      @keyframes heroFadeUp{
+        from { opacity: 0; transform: translateY(8px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      .blog-hero__controls .blog-search{
+        width: 100%;
+        max-width: 520px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        padding: 10px 14px;
+
+        border-radius: 999px;
+        border: 1px solid rgba(255,255,255,0.28);
+        background: rgba(255,255,255,0.14);
+        backdrop-filter: blur(10px);
+      }
+
+      .blog-hero__controls .blog-search input{
+        width: 100%;
+        border: none;
+        outline: none;
+        background: transparent;
+        color: #fff;
+        font: inherit;
+      }
+
+      .blog-hero__controls .blog-search input::placeholder{
+        color: rgba(255,255,255,0.85);
+      }
+
+      /* Blog content layout */
+      .blog-wrap{
+        padding: 34px 0 64px;
+      }
+
+      .blog-section{
+        margin-top: 26px;
+      }
+
+      .blog-section__head{
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-bottom: 12px;
+      }
+
+      .blog-section__title{
+        font-family: "Cinzel", serif;
+        font-size: 22px;
+        margin: 0;
+      }
+
+      .blog-section__hint{
+        opacity: 0.72;
+        font-size: 13px;
+      }
+
+      .blog-grid{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 16px;
+      }
+
+      .blog-card{
+        grid-column: span 4;
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid rgba(0,0,0,0.08);
+        background: rgba(255,255,255,0.96);
+        box-shadow: 0 18px 50px rgba(0,0,0,0.08);
+        display: flex;
+        flex-direction: column;
+        min-height: 240px;
+        transition: transform .18s ease, box-shadow .18s ease;
+
+        position: relative;
+        cursor: pointer;
+      }
+
+      .blog-card__link{
+        position: absolute;
+        inset: 0;
+        z-index: 5;
+        border-radius: 18px;
+      }
+
+      .blog-card:hover{
+        transform: translateY(-2px);
+        box-shadow: 0 22px 60px rgba(0,0,0,0.12);
+      }
+
+      .blog-card--featured{
+        grid-column: span 6;
+        min-height: 320px;
+      }
+
+      .blog-card__media{
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        background: rgba(0,0,0,0.04);
+        overflow: hidden;
+      }
+
+      .blog-card__media img{
+        width:100%;
+        height:100%;
+        object-fit: cover;
+        display:block;
+        transition: transform .4s ease;
+      }
+
+      .blog-card:hover .blog-card__media img{
+        transform: scale(1.05);
+      }
+
+      .blog-card__media--noimg{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 18px;
+        background: linear-gradient(135deg, rgba(0,0,0,0.04), rgba(0,0,0,0.02));
+      }
+
+      .blog-card__media--noimg .noimg{
+        width: 100%;
+        border-radius: 14px;
+        border: 1px dashed rgba(0,0,0,0.14);
+        background: rgba(255,255,255,0.72);
+        padding: 18px;
+        text-align: left;
+      }
+
+      .noimg__kicker{
+        letter-spacing: 0.18em;
+        font-size: 11px;
+        opacity: 0.7;
+      }
+
+      .noimg__title{
+        font-family: "Cinzel", serif;
+        font-size: 18px;
+        margin: 8px 0 0;
+        opacity: 0.95;
+      }
+
+      .blog-card__body{
+        padding: 16px 16px 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex: 1;
+      }
+
+      .blog-meta{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .blog-pill{
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        font-size: 12px;
+        border: 1px solid rgba(0,0,0,0.10);
+        background: rgba(0,0,0,0.04);
+        white-space: nowrap;
+      }
+
+      .blog-dot{
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: rgba(0,0,0,0.35);
+        display: inline-block;
+      }
+
+      .blog-pill--law_changes .blog-dot{ background: rgba(255,160,60,0.95); }
+      .blog-pill--holiday .blog-dot{ background: rgba(30,160,120,0.95); }
+      .blog-pill--normal .blog-dot{ background: rgba(0,0,0,0.35); }
+
+      .blog-date{
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 10px;
+        border-radius: 999px;
+        font-size: 11px;
+        letter-spacing: 0.06em;
+
+        border: 1px solid rgba(0,0,0,0.08);
+        background: rgba(0,0,0,0.03);
+        color: rgba(0,0,0,0.75);
+      }
+
+      .blog-date::before{
+        content: "📅";
+        font-size: 13px;
+        filter: saturate(1.4) brightness(1.2);
+      }
+
+      .blog-title{
+        font-family: "Cinzel", serif;
+        font-size: 18px;
+        margin: 0;
+        line-height: 1.18;
+      }
+
+      .blog-readmore{
+        margin-top: auto;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+
+        color: #C9A24D;
+        opacity: 0.95;
+
+        transition: transform .15s ease, letter-spacing .15s ease, opacity .15s ease;
+      }
+
+      .blog-card:hover .blog-readmore{
+        transform: translateX(4px);
+        letter-spacing: 0.08em;
+        opacity: 1;
+      }
+
+      .blog-excerpt{
+        margin: 0;
+        opacity: 0.85;
+        line-height: 1.55;
+        font-size: 14px;
+      }
+
+      .blog-empty, .blog-status{
+        padding: 18px;
+        border-radius: 16px;
+        border: 1px solid rgba(0,0,0,0.08);
+        background: rgba(255,255,255,0.96);
+        box-shadow: 0 18px 50px rgba(0,0,0,0.06);
+        line-height: 1.6;
+      }
+
+      @media (max-width: 980px){
+        .blog-card{ grid-column: span 6; }
+        .blog-card--featured{ grid-column: span 12; }
+      }
+
+      @media (max-width: 640px){
+        .blog-card{ grid-column: span 12; }
+        .blog-hero__controls .blog-search{ max-width: 100%; }
+      }
+    </style>
+  </head>
+
+  <body class="page--hero-light page--blog">
+
+  <!-- HEADER -->
+  <header class="site-header site-header--on-hero">
+    <div class="container header-inner">
+      <a class="brand" href="./index.html" aria-label="Home">
+        <img
+          class="brand-logo"
+          src="https://pub-ab596235a0b44f2d8d40325dcf71ff74.r2.dev/homepage/logo.png"
+          alt="Deni Casa"
+          width="180"
+          height="60"
+        />
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__icon" aria-hidden="true"></span>
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="./index.html">Home</a>
+        <a href="./properties.html">Properties</a>
+        <a href="./mortgages.html">Mortgages</a>
+        <a href="./90days.html">90 Days</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./blogs.html" class="active">Blogs</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="mort-hero blog-hero">
+      <div class="hero-inner mort-hero__content blog-hero__content">
+        <p class="mort-hero__kicker">JOURNAL</p>
+        <h1 class="mort-hero__title">The Deni Casa Journal</h1>
+        <p class="mort-hero__sub">
+          Market updates, legal changes and curated guides for life and property on the Costa del Sol.
+        </p>
+
+        <div class="blog-hero__controls">
+          <div class="blog-search">
+            <span aria-hidden="true">🔎</span>
+            <input id="blogSearch" type="search" placeholder="Search posts by title or excerpt..." />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section id="blogPosts" class="blog-wrap">
+      <div class="dc-wide">
+
+        <div id="blogStatus" class="blog-status">Loading posts…</div>
+
+        <!-- Featured -->
+        <section class="blog-section" id="featuredSection" style="display:none;">
+          <div class="blog-section__head">
+            <h2 class="blog-section__title">Featured</h2>
+            <div class="blog-section__hint">Hand-picked highlights</div>
+          </div>
+          <div id="blogFeatured" class="blog-grid"></div>
+        </section>
+
+        <!-- Main list -->
+        <section class="blog-section">
+          <div class="blog-section__head">
+            <h2 class="blog-section__title" id="resultsTitle">Latest posts</h2>
+            <div class="blog-section__hint" id="resultsHint"></div>
+          </div>
+
+          <div id="blogList" class="blog-grid"></div>
+
+          <div id="blogEmpty" class="blog-empty" style="display:none;">
+            No posts found. Try a different keyword.
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="dc-wide footer-grid">
+
+      <div class="footer-col">
+        <img
+          class="footer-logo"
+          src="https://pub-ab596235a0b44f2d8d40325dcf71ff74.r2.dev/homepage/logo.png"
+          alt="Deni Casa"
+          width="180"
+          height="60"
+          loading="lazy"
+        />
+        <p class="footer-text">
+          Helping people find their dream property on the Costa del Sol — with trusted guidance,
+          premium listings, and a personal approach from first viewing to final keys.
+        </p>
+
+        <div class="footer-social">
+          <a href="https://www.instagram.com/deni.casa/" target="_blank" rel="noreferrer" aria-label="Instagram">
+            <img src="https://pub-ab596235a0b44f2d8d40325dcf71ff74.r2.dev/homepage/instagram.svg" alt="Instagram" />
+          </a>
+
+          <a href="https://www.facebook.com/denicasarealestate/" target="_blank" rel="noreferrer" aria-label="Facebook">
+            <img src="https://pub-ab596235a0b44f2d8d40325dcf71ff74.r2.dev/homepage/facebook.svg" alt="Facebook" />
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Explore</h4>
+        <a class="footer-link" href="./index.html">Home</a>
+        <a class="footer-link" href="./properties.html">Properties</a>
+        <a class="footer-link" href="./mortgages.html">Mortgages</a>
+        <a class="footer-link" href="./90days.html">90 Days</a>
+        <a class="footer-link" href="./contact.html">Contact</a>
+        <a class="footer-link" href="./blogs.html">Blogs</a>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Contact</h4>
+        <p class="footer-text">
+          📩 <a class="footer-link inline" href="mailto:denisa@denicasa.es">denisa@denicasa.es</a><br />
+          📞 <a class="footer-link inline" href="tel:+34604110306">+34 604 11 03 06</a><br />
+          💬 <a class="footer-link inline" href="https://wa.me/34604110306" target="_blank" rel="noreferrer">WhatsApp</a>
+        </p>
+
+        <p class="footer-text" style="margin-top: 14px; opacity: .9;">
+          Mon–Fri • 09:00–18:00 (CET)<br />
+          Costa del Sol, Spain
+        </p>
+      </div>
+
+    </div>
+
+    <div class="dc-wide footer-bottom">
+      <span>© <span id="year"></span> Deni Casa. All rights reserved.</span>
+      <span class="footer-legal">
+        <a href="./privacy.html">Privacy Policy</a>
+        <span class="dot">•</span>
+        <a href="./terms.html">Terms of Use</a>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    /**
+     * BLOG: Google Sheets (Published) -> gviz JSON -> cards
+     *
+     * Sheet headers expected (row 1):
+     * published | date | slug | title | excerpt | cover_image | category | featured | content
+     */
+
+    const BLOG_SHEET_ID = "133a6MC1H2Sezbv1NW5T4daZd4LeThblnYSy8zl5OB3g";
+    const BLOG_GID = "0";
+
+    const GVIZ_URL = `https://docs.google.com/spreadsheets/d/${BLOG_SHEET_ID}/gviz/tq?gid=${BLOG_GID}&tqx=out:json`;
+
+    const els = {
+      status: document.getElementById("blogStatus"),
+      featuredSection: document.getElementById("featuredSection"),
+      featured: document.getElementById("blogFeatured"),
+      list: document.getElementById("blogList"),
+      empty: document.getElementById("blogEmpty"),
+      search: document.getElementById("blogSearch"),
+      resultsTitle: document.getElementById("resultsTitle"),
+      resultsHint: document.getElementById("resultsHint"),
+    };
+
+    let ALL_POSTS = [];
+    let ACTIVE_QUERY = "";
+
+    function stripGvizWrapper(text) {
+      const start = text.indexOf("{");
+      const end = text.lastIndexOf("}");
+      if (start === -1 || end === -1) throw new Error("Unexpected gviz response");
+      return JSON.parse(text.slice(start, end + 1));
+    }
+
+    function toRows(gvizJson) {
+      const cols = gvizJson.table.cols.map(c => (c.label || "").trim());
+      return gvizJson.table.rows.map(r => {
+        const obj = {};
+        cols.forEach((k, i) => {
+          obj[k] = r.c[i] ? (r.c[i].v ?? "") : "";
+        });
+        return obj;
+      });
+    }
+
+    function parseDate(d){
+      if (!d) return 0;
+
+      const m = String(d).match(/Date\((\d+),(\d+),(\d+)\)/);
+      if (m){
+        return new Date(
+          Number(m[1]),
+          Number(m[2]),
+          Number(m[3])
+        ).getTime();
+      }
+
+      const dt = new Date(d);
+      return isNaN(dt) ? 0 : dt.getTime();
+    }
+
+    function formatDate(d) {
+      if (!d) return "";
+
+      const m = String(d).match(/Date\((\d+),(\d+),(\d+)\)/);
+      if (m) {
+        const year = Number(m[1]);
+        const month = Number(m[2]);
+        const day = Number(m[3]);
+        return new Date(year, month, day).toLocaleDateString("en-GB", {
+          day: "2-digit",
+          month: "short",
+          year: "numeric"
+        });
+      }
+
+      const dt = new Date(d);
+      if (!isNaN(dt)) {
+        return dt.toLocaleDateString("en-GB", {
+          day: "2-digit",
+          month: "short",
+          year: "numeric"
+        });
+      }
+
+      return String(d);
+    }
+
+    function normalizePost(p) {
+      const category = String(p.category || "normal").toLowerCase().trim();
+      return {
+        published: String(p.published || "").toUpperCase() === "TRUE",
+        featured: String(p.featured || "").toUpperCase() === "TRUE",
+        date_raw: p.date,
+        date_ts: parseDate(p.date),
+        date: formatDate(p.date),
+        slug: String(p.slug || "").trim(),
+        title: String(p.title || "").trim(),
+        excerpt: String(p.excerpt || "").trim(),
+        cover_image: String(p.cover_image || "").trim(),
+        category: category || "normal",
+      };
+    }
+
+    function categoryLabel(cat) {
+      if (cat === "market_insights") return "Market Insights";
+      if (cat === "area_guides") return "Area Guides";
+      if (cat === "buying_selling") return "Buying & Selling";
+      if (cat === "legal_updates") return "Legal Updates";
+      if (cat === "lifestyle") return "Lifestyle";
+      if (cat === "personal_insights") return "Personal Insights";
+      return "Insights";
+    }
+
+    function safeText(s) {
+      return (s || "").replace(/[<>&"]/g, c => ({ "<":"&lt;", ">":"&gt;", "&":"&amp;", "\"":"&quot;" }[c]));
+    }
+
+    function cardHTML(p, isFeatured = false) {
+      const cat = p.category || "normal";
+      const label = categoryLabel(cat);
+      const classes = ["blog-card", `blog-card--${cat}`, isFeatured ? "blog-card--featured" : ""].filter(Boolean).join(" ");
+      const href = `blog-post.html?slug=${encodeURIComponent(p.slug)}`;
+
+      const media = p.cover_image
+        ? `<div class="blog-card__media"><img loading="lazy" src="${p.cover_image}" alt="${safeText(p.title)}"></div>`
+        : `<div class="blog-card__media blog-card__media--noimg">
+             <div class="noimg">
+               <div class="noimg__kicker">${safeText(label).toUpperCase()}</div>
+               <div class="noimg__title">${safeText(p.title)}</div>
+             </div>
+           </div>`;
+
+      return `
+        <article class="${classes}">
+          <a class="blog-card__link" href="${href}" aria-label="${safeText(p.title)}"></a>
+          ${media}
+
+          <div class="blog-card__body">
+            <div class="blog-meta">
+              <span class="blog-pill blog-pill--${cat}">
+                <span class="blog-dot" aria-hidden="true"></span>
+                ${safeText(label)}
+              </span>
+
+              <span class="blog-date">${safeText(p.date)}</span>
+            </div>
+
+            <h3 class="blog-title">${safeText(p.title)}</h3>
+
+            ${p.excerpt ? `<p class="blog-excerpt">${safeText(p.excerpt)}</p>` : ""}
+
+            <span class="blog-readmore">
+              Read more <span aria-hidden="true">→</span>
+            </span>
+          </div>
+        </article>
+      `;
+    }
+
+    function applySearch(posts) {
+      const q = ACTIVE_QUERY.toLowerCase().trim();
+      if (!q) return posts.filter(p => p.published);
+
+      return posts.filter(p => {
+        if (!p.published) return false;
+        const hay = `${p.title} ${p.excerpt}`.toLowerCase();
+        return hay.includes(q);
+      });
+    }
+
+    function render() {
+      const posts = applySearch(ALL_POSTS)
+        .sort((a,b) => b.date_ts - a.date_ts);
+
+      const showFeatured = !ACTIVE_QUERY;
+      const featuredPosts = ALL_POSTS
+        .filter(p => p.published && p.featured)
+        .sort((a,b) => b.date_ts - a.date_ts)
+        .slice(0, 4);
+
+      if (showFeatured && featuredPosts.length) {
+        els.featuredSection.style.display = "";
+        els.featured.innerHTML = featuredPosts.map(p => cardHTML(p, true)).join("");
+      } else {
+        els.featuredSection.style.display = "none";
+        els.featured.innerHTML = "";
+      }
+
+      els.list.innerHTML = posts.map(p => cardHTML(p, false)).join("");
+
+      const empty = posts.length === 0;
+      els.empty.style.display = empty ? "" : "none";
+
+      els.resultsHint.textContent = ACTIVE_QUERY ? `Search: “${ACTIVE_QUERY}”` : "";
+      els.resultsTitle.textContent = "Latest posts";
+    }
+
+    async function loadPosts() {
+      try {
+        els.status.style.display = "";
+        els.status.textContent = "Loading posts…";
+
+        const res = await fetch(GVIZ_URL, { cache: "no-store" });
+        const text = await res.text();
+        const gviz = stripGvizWrapper(text);
+        const rows = toRows(gviz);
+
+        rows.sort((a, b) => parseDate(b.date) - parseDate(a.date));
+        ALL_POSTS = rows.map(normalizePost);
+
+        els.status.style.display = "none";
+        render();
+
+      } catch (err) {
+        console.error(err);
+        els.status.style.display = "";
+        els.status.textContent = "Could not load posts. Make sure the sheet is Published to the web and the GID is correct.";
+      }
+    }
+
+    let searchTimer = null;
+    els.search.addEventListener("input", (e) => {
+      const val = String(e.target.value || "");
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(() => {
+        ACTIVE_QUERY = val.trim();
+        render();
+      }, 120);
+    });
+
+    loadPosts();
+  </script>
+
+  <script src="./src/main.js"></script>
+</body>
+</html>
