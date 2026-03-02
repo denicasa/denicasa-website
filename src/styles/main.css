@@ -198,7 +198,7 @@ a:hover{ opacity: .92; }
 
 .hero--full{
   min-height: var(--home-hero-h);
-  height: var(--home-hero-h);
+  height: auto;
 
   display: flex;
   flex-direction: column;
