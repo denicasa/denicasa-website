@@ -28,9 +28,6 @@
 @supports (height: 100svh){
   :root{ --home-hero-h: 100svh; }
 }
-@supports (height: 100dvh){
-  :root{ --home-hero-h: 100dvh; }
-}
 
 *{ box-sizing:border-box; }
 html,body{ height:100%; }
