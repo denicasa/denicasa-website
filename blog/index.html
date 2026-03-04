@@ -665,8 +665,19 @@
   </script>
 
   <script>
+    function getSlugFromPath() {
+      // examples:
+      // /blog/my-slug           -> ["blog","my-slug"]
+      // /blog/my-slug/          -> ["blog","my-slug"]
+      const parts = window.location.pathname.split("/").filter(Boolean);
+      const blogIndex = parts.indexOf("blog");
+      if (blogIndex === -1) return "";
+      const maybeSlug = parts[blogIndex + 1] || "";
+      return maybeSlug ? decodeURIComponent(maybeSlug).trim() : "";
+    }
+
     const params = new URLSearchParams(window.location.search);
-    const SLUG = params.get("slug");
+    const SLUG = (params.get("slug") || getSlugFromPath() || "").trim();
 
     const BLOG_SHEET_ID = "133a6MC1H2Sezbv1NW5T4daZd4LeThblnYSy8zl5OB3g";
     const BLOG_GID = "0";
