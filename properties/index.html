@@ -1,1 +1,771 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Preload: Logo -->
+    <link
+      rel="preload"
+      as="image"
+      href="https://pub-ab596235a0b44f2d8d40325dcf71ff74.r2.dev/homepage/logo.png"
+    />
+
+    <!-- Primary SEO -->
+    <title>Properties for Sale & New Developments | Deni Casa (Costa del Sol)</title>
+    <meta
+      name="description"
+      content="Browse curated properties for sale, rentals, and new developments across the Costa del Sol. Filter by location, price and bedrooms — with trusted guidance from Deni Casa."
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://denicasa.es/properties" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link
+      rel="apple-touch-icon"
+      href="https://pub-ab596235a0b44f2d8d40325dcf71ff74.r2.dev/homepage/logo.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Deni Casa" />
+    <meta property="og:title" content="Properties | Deni Casa (Costa del Sol)" />
+    <meta
+      property="og:description"
+      content="Explore curated Costa del Sol listings: sales, rentals and new developments. Filter by location, price and bedrooms."
+    />
+    <meta property="og:url" content="https://denicasa.es/properties" />
+    <meta
+      property="og:image"
+      content="https://pub-ab596235a0b44f2d8d40325dcf71ff74.r2.dev/homepage/og-home.jpg"
+    />
+    <meta property="og:image:alt" content="Deni Casa Properties on the Costa del Sol" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_GB" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Properties | Deni Casa (Costa del Sol)" />
+    <meta
+      name="twitter:description"
+      content="Browse curated Costa del Sol listings: sales, rentals and new developments."
+    />
+    <meta
+      name="twitter:image"
+      content="https://pub-ab596235a0b44f2d8d40325dcf71ff74.r2.dev/homepage/og-home.jpg"
+    />
+
+    <!-- Performance: Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS (root-relative so it works at /properties) -->
+    <link rel="stylesheet" href="/src/styles/main.css" />
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://denicasa.es/#org",
+          "name": "Deni Casa",
+          "url": "https://denicasa.es/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://pub-ab596235a0b44f2d8d40325dcf71ff74.r2.dev/homepage/logo.png"
+          },
+          "email": "denisa@denicasa.es",
+          "telephone": "+34604110306",
+          "sameAs": [
+            "https://www.instagram.com/deni.casa/",
+            "https://www.facebook.com/denicasarealestate/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://denicasa.es/#website",
+          "url": "https://denicasa.es/",
+          "name": "Deni Casa",
+          "publisher": { "@id": "https://denicasa.es/#org" },
+          "inLanguage": "en",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://denicasa.es/properties?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "CollectionPage",
+          "@id": "https://denicasa.es/properties#webpage",
+          "url": "https://denicasa.es/properties",
+          "name": "Properties for Sale & New Developments | Deni Casa (Costa del Sol)",
+          "description": "Browse curated properties for sale, rentals, and new developments across the Costa del Sol. Filter by location, price and bedrooms — with trusted guidance from Deni Casa.",
+          "isPartOf": { "@id": "https://denicasa.es/#website" },
+          "about": { "@id": "https://denicasa.es/#org" },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://pub-ab596235a0b44f2d8d40325dcf71ff74.r2.dev/homepage/og-home.jpg"
+          },
+          "inLanguage": "en"
+        }
+      ]
+    }
+    </script>
+  </head>
+
+  <body class="page--properties">
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="dc-wide header-inner">
+        <a class="brand" href="/" aria-label="Home">
+          <img
+            class="brand-logo"
+            src="https://pub-ab596235a0b44f2d8d40325dcf71ff74.r2.dev/homepage/logo.png"
+            alt="Deni Casa"
+            width="180"
+            height="60"
+          />
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+          <span class="nav-toggle__icon" aria-hidden="true"></span>
+          <span class="sr-only">Menu</span>
+        </button>
+
+        <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+          <a href="/">Home</a>
+          <a href="/properties" class="active">Properties</a>
+          <a href="/mortgages">Mortgages</a>
+          <a href="/90days">90 Days</a>
+          <a href="/contact">Contact</a>
+          <a href="/blogs">Blogs</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- TOP BAR -->
+      <section class="props-hero">
+        <div class="hero-inner">
+          <h1 class="props-title">Properties</h1>
+          <p class="props-sub">
+            Discover curated sales, rentals and new developments across the Costa del Sol.
+          </p>
+
+          <!-- FILTER BAR -->
+          <div class="props-controls" role="region" aria-label="Property filters">
+            <!-- CATEGORY -->
+            <div class="props-controls__row">
+              <label class="props-filter__label" for="listingType">Category</label>
+
+              <select id="listingType" class="props-filter__select dc-native-select">
+                <option value="all">All</option>
+                <option value="sales">Sales</option>
+                <option value="rentals">Rentals</option>
+                <option value="new">New Developments</option>
+              </select>
+            </div>
+
+            <!-- SORT -->
+            <div class="props-controls__row">
+              <label class="props-filter__label" for="sortBy">Sort</label>
+
+              <select id="sortBy" class="props-filter__select dc-native-select">
+                <option value="featured">Featured</option>
+                <option value="price-asc">Price: Low → High</option>
+                <option value="price-desc">Price: High → Low</option>
+                <option value="title-asc">Name: A → Z</option>
+              </select>
+            </div>
+
+            <!-- SEARCH -->
+            <div class="props-controls__row props-controls__search">
+              <label class="props-filter__label" for="searchText">Search</label>
+              <input id="searchText" class="props-search" type="search" placeholder="Search location, name, area…" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESULTS BAR -->
+      <div class="props-resultsbar" aria-live="polite">
+        <span id="resultsCount"></span>
+      </div>
+
+      <!-- GRID -->
+      <section class="page-section">
+        <div class="dc-wide">
+          <div id="propsGrid" class="props-grid">
+            <!-- Properties will load from Google Sheets -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="dc-wide footer-grid">
+        <div class="footer-col">
+          <img
+            class="footer-logo"
+            src="https://pub-ab596235a0b44f2d8d40325dcf71ff74.r2.dev/homepage/logo.png"
+            alt="Deni Casa"
+            width="180"
+            height="60"
+            loading="lazy"
+          />
+          <p class="footer-text">
+            Helping people find their dream property on the Costa del Sol — with trusted guidance,
+            premium listings, and a personal approach from first viewing to final keys.
+          </p>
+
+          <div class="footer-social">
+            <a href="https://www.instagram.com/deni.casa/" target="_blank" rel="noreferrer" aria-label="Instagram">
+              <img src="https://pub-ab596235a0b44f2d8d40325dcf71ff74.r2.dev/homepage/instagram.svg" alt="Instagram" />
+            </a>
+
+            <a href="https://www.facebook.com/denicasarealestate/" target="_blank" rel="noreferrer" aria-label="Facebook">
+              <img src="https://pub-ab596235a0b44f2d8d40325dcf71ff74.r2.dev/homepage/facebook.svg" alt="Facebook" />
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Explore</h4>
+          <a class="footer-link" href="/">Home</a>
+          <a class="footer-link" href="/properties">Properties</a>
+          <a class="footer-link" href="/mortgages">Mortgages</a>
+          <a class="footer-link" href="/90days">90 Days</a>
+          <a class="footer-link" href="/contact">Contact</a>
+          <a class="footer-link" href="/blogs">Blogs</a>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Contact</h4>
+          <p class="footer-text">
+            📩 <a class="footer-link inline" href="mailto:denisa@denicasa.es">denisa@denicasa.es</a><br />
+            📞 <a class="footer-link inline" href="tel:+34604110306">+34 604 11 03 06</a><br />
+            💬 <a class="footer-link inline" href="https://wa.me/34604110306" target="_blank" rel="noreferrer">WhatsApp</a>
+          </p>
+
+          <p class="footer-text" style="margin-top: 14px; opacity: .9;">
+            Mon–Fri • 09:00–18:00 (CET)<br />
+            Costa del Sol, Spain
+          </p>
+        </div>
+      </div>
+
+      <div class="dc-wide footer-bottom">
+        <span>© <span id="year"></span> Deni Casa. All rights reserved.</span>
+        <span class="footer-legal">
+          <a href="/privacy">Privacy Policy</a>
+          <span class="dot">•</span>
+          <a href="/terms">Terms of Use</a>
+        </span>
+      </div>
+    </footer>
+
+    <script>
+    (function () {
+      document.addEventListener("DOMContentLoaded", () => {
+
+        // ======================
+        // PRETTY URL SUPPORT
+        // Allows /properties/Estepona to behave like /properties/?q=Estepona
+        // ======================
+        let prettyQ = "";
+
+        (function syncPrettyURLToQuery() {
+          const path = window.location.pathname; // e.g. /properties/Estepona
+          const parts = path.split("/").filter(Boolean);
+
+          // Expect ["properties", "Estepona"]
+          if (parts[0] === "properties" && parts.length >= 2) {
+            // Join the rest in case you ever have /properties/La/Linea etc.
+            const areaFromPath = decodeURIComponent(parts.slice(1).join(" ")).trim();
+            if (areaFromPath) prettyQ = areaFromPath;
+          }
+        })();
+
+        // ======================
+        // CONFIG
+        // ======================
+        const SHEET_ID = "1Bzd-k17JMPau7_uGuxW8PUsTpHUl_JpOykHPp9hOFjQ";
+        const SHEET_NAME = "properties";
+        const CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(SHEET_NAME)}`;
+
+        // ======================
+        // ELEMENTS
+        // ======================
+        const typeSelect = document.getElementById("listingType");
+        const sortSelect = document.getElementById("sortBy");
+        const searchInput = document.getElementById("searchText");
+        const grid = document.getElementById("propsGrid");
+        const count = document.getElementById("resultsCount");
+
+        if (!typeSelect || !sortSelect || !searchInput || !grid || !count) {
+          console.error("Missing required DOM elements for properties page.");
+          return;
+        }
+
+        // ======================
+        // HELPERS
+        // ======================
+        function normText(s) {
+          return String(s || "")
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "") // removes accents
+            .trim();
+        }
+        
+        function getParamAny(params, keys) {
+          for (const k of keys) {
+            const v = (params.get(k) || "").trim();
+            if (v) return v;
+          }
+          return "";
+        }
+        
+        function parseCSV(text) {
+          const rows = [];
+          let row = [];
+          let cur = "";
+          let inQuotes = false;
+
+          for (let i = 0; i < text.length; i++) {
+            const ch = text[i];
+            const next = text[i + 1];
+
+            if (ch === '"' && inQuotes && next === '"') {
+              cur += '"';
+              i++;
+              continue;
+            }
+            if (ch === '"') {
+              inQuotes = !inQuotes;
+              continue;
+            }
+            if (ch === "," && !inQuotes) {
+              row.push(cur);
+              cur = "";
+              continue;
+            }
+            if ((ch === "\n" || ch === "\r") && !inQuotes) {
+              if (ch === "\r" && next === "\n") i++;
+              row.push(cur);
+              rows.push(row);
+              row = [];
+              cur = "";
+              continue;
+            }
+
+            cur += ch;
+          }
+
+          if (cur.length || row.length) {
+            row.push(cur);
+            rows.push(row);
+          }
+
+          return rows;
+        }
+
+        function normalizeBool(v) {
+          return String(v || "").trim().toLowerCase() === "true";
+        }
+
+        function safeNum(v) {
+          const n = Number(String(v || "").replace(/[^\d.-]/g, ""));
+          return Number.isFinite(n) ? n : 0;
+        }
+
+        function formatEuro(num) {
+          if (!num) return "";
+          try {
+            return new Intl.NumberFormat("en-IE", {
+              style: "currency",
+              currency: "EUR",
+              maximumFractionDigits: 0
+            }).format(num);
+          } catch {
+            return `€${num.toLocaleString()}`;
+          }
+        }
+
+        function firstImage(row) {
+          const single = (row["Image URL"] || "").trim();
+          if (single) return single;
+
+          const multi = (row["Image URLs"] || "").trim();
+          if (multi) {
+            const first = multi.split(",")[0].trim();
+            if (first) return first;
+          }
+
+          return "https://images.unsplash.com/photo-1560448204-603b3fc33ddc?auto=format&fit=crop&w=1600&q=70";
+        }
+
+        function badgeText(row) {
+          const type = (row["Category"] || row["Status"] || "").toLowerCase();
+          if (type.includes("rental")) return "RENTALS";
+          if (type.includes("new")) return "NEW DEVELOPMENTS";
+          if (type.includes("sale")) return "SALES";
+
+          const dt = (row["_type"] || "").toLowerCase();
+          if (dt === "rentals") return "RENTALS";
+          if (dt === "new") return "NEW DEVELOPMENTS";
+          if (dt === "sales") return "SALES";
+          return "PROPERTY";
+        }
+
+        function mapType(row) {
+          const cat = (row["Category"] || "").toLowerCase();
+          const status = (row["Status"] || "").toLowerCase();
+          const combined = `${cat} ${status}`;
+
+          if (combined.includes("rental") || combined.includes("rent")) return "rentals";
+          if (combined.includes("new") || combined.includes("develop")) return "new";
+          if (combined.includes("sale") || combined.includes("sell")) return "sales";
+          return "sales";
+        }
+
+        function buildMeta(row) {
+          const beds = (row["Beds"] || "").trim();
+          const baths = (row["Baths"] || "").trim();
+          const built = (row["Built Size (m²)"] || "").trim();
+
+          const items = [];
+
+          if (beds) {
+            items.push(`
+              <span class="props-meta-item">
+                <span class="props-icon">🛏️</span>
+                ${beds}
+              </span>
+            `);
+          }
+
+          if (baths) {
+            items.push(`
+              <span class="props-meta-item">
+                <span class="props-icon">🛁</span>
+                ${baths}
+              </span>
+            `);
+          }
+
+          if (built) {
+            items.push(`
+              <span class="props-meta-item">
+                <span class="props-icon">📐</span>
+                ${built} m²
+              </span>
+            `);
+          }
+
+          return items.join("");
+        }
+
+        function buildTags(row) {
+          const parts = [
+            row["Title"],
+            row["Location"],
+            row["Area / Town"],
+            row["Property Type"],
+            row["Features"],
+            row["Reference"]
+          ].filter(Boolean);
+
+          return normText(parts.join(" "));
+        }
+
+        function makeCard(row) {
+          const a = document.createElement("a");
+          a.className = "props-card";
+
+          const type = row["_type"];
+          const title = (row["Title"] || "").trim();
+          const location = (row["Location"] || row["Area / Town"] || "").trim();
+          const priceNum = safeNum(row["Price (€)"]);
+          const priceText = (row["Price Text"] || "").trim();
+          const price = priceText || (priceNum ? formatEuro(priceNum) : "");
+          const href = (row["URL (Property Page)"] || "").trim();
+          const slug = (row["Slug"] || "").trim();
+          const ref  = (row["Reference"] || row["ID"] || "").trim();
+
+          a.dataset.type = type;
+          a.dataset.price = String(priceNum || 0);
+          a.dataset.title = title;
+          a.dataset.tags = buildTags(row);
+          a.dataset.beds = String(safeNum(row["Beds"]));
+          a.dataset.publish = String(row["_publish"] ? "true" : "false");
+
+          if (slug) {
+            a.href = `/property/?slug=${encodeURIComponent(slug)}`;
+            a.target = "_self";
+          } else if (ref) {
+            a.href = `/property/?ref=${encodeURIComponent(ref)}`;
+            a.target = "_self";
+          } else if (href) {
+            a.href = href;
+            a.target = "_blank";
+            a.rel = "noreferrer";
+          } else {
+            a.href = "#";
+            a.setAttribute("aria-disabled", "true");
+            a.style.cursor = "not-allowed";
+            a.title = "Missing Slug/Reference/URL for this property.";
+            a.addEventListener("click", (e) => e.preventDefault());
+          }
+
+          const imgUrl = firstImage(row);
+          const meta = buildMeta(row);
+
+          const badge = document.createElement("span");
+          badge.className = "props-badge";
+          badge.textContent = badgeText(row);
+
+          const img = document.createElement("img");
+          img.src = imgUrl;
+          img.alt = title || "Property";
+          img.loading = "lazy";
+
+          const body = document.createElement("div");
+          body.className = "props-card__body";
+
+          const t = document.createElement("div");
+          t.className = "props-card__title";
+          t.textContent = title || "Untitled property";
+
+          const loc = document.createElement("div");
+          loc.className = "props-card__location";
+          loc.innerHTML = `<span class="props-pin" aria-hidden="true">📍</span>${location}`;
+
+          const m = document.createElement("div");
+          m.className = "props-card__meta";
+          m.innerHTML = meta;
+
+          const p = document.createElement("div");
+          p.className = "props-card__price";
+          p.textContent = price || "";
+
+          const bottom = document.createElement("div");
+          bottom.className = "props-card__bottom";
+
+          if (location) bottom.appendChild(loc);
+          if (meta) bottom.appendChild(m);
+          if (price) bottom.appendChild(p);
+
+          body.appendChild(t);
+          body.appendChild(bottom);
+
+          const media = document.createElement("div");
+          media.className = "props-card__media";
+
+          media.appendChild(img);
+
+          a.appendChild(media);
+          a.appendChild(badge);
+          a.appendChild(body);
+
+          return a;
+        }
+
+        function matchesType(card, type) {
+          if (type === "all") return true;
+          return card.dataset.type === type;
+        }
+
+        function matchesSearch(card, q) {
+          if (!q) return true;
+
+          const hay = normText(card.dataset.title + " " + (card.dataset.tags || ""));
+          const needle = normText(q);
+
+          return hay.includes(needle);
+        }
+
+        function matchesBeds(card, bedsMin) {
+          if (!bedsMin) return true;
+          return Number(card.dataset.beds || 0) >= Number(bedsMin);
+        }
+
+        function matchesMinMax(card, min, max) {
+          const price = Number(card.dataset.price || 0);
+          if (min && price < Number(min)) return false;
+          if (max && price > Number(max)) return false;
+          return true;
+        }
+
+        function sortCards(list, sortKey) {
+          const copy = [...list];
+
+          if (sortKey === "title-asc") {
+            copy.sort((a, b) => (a.dataset.title || "").localeCompare(b.dataset.title || ""));
+          } else if (sortKey === "price-asc") {
+            copy.sort((a, b) => (Number(a.dataset.price || 0) - Number(b.dataset.price || 0)));
+          } else if (sortKey === "price-desc") {
+            copy.sort((a, b) => (Number(b.dataset.price || 0) - Number(a.dataset.price || 0)));
+          }
+          return copy;
+        }
+
+        function setURLParamsFromUI() {
+          const url = new URL(window.location.href);
+          url.searchParams.set("type", typeSelect.value);
+
+          const q = searchInput.value.trim();
+          if (q) url.searchParams.set("q", q);
+          else url.searchParams.delete("q");
+
+          window.history.replaceState({}, "", url);
+        }
+
+        // ======================
+        // LOAD + RENDER
+        // ======================
+        let allCards = [];
+
+        async function loadSheet() {
+          grid.innerHTML = "";
+          count.textContent = "Loading…";
+
+          let csvText = "";
+          try {
+            const res = await fetch(CSV_URL, { cache: "no-store" });
+            if (!res.ok) throw new Error("Failed to fetch CSV");
+            csvText = await res.text();
+          } catch (err) {
+            grid.innerHTML = `
+              <div style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:14px;padding:18px;">
+                <strong>Couldn’t load properties.</strong><br />
+                Please check your Google Sheet sharing / publish settings.<br /><br />
+                <span style="opacity:.8;">Tip: The sheet must be accessible via CSV export.</span>
+              </div>
+            `;
+            count.textContent = "";
+            return;
+          }
+
+          const rows = parseCSV(csvText);
+          if (!rows.length) {
+            count.textContent = "0 Properties Found";
+            return;
+          }
+
+          const headers = rows[0].map(h => String(h || "").trim());
+          const dataRows = rows.slice(1);
+
+          const objects = dataRows
+            .filter(r => r.some(cell => String(cell || "").trim() !== ""))
+            .map(r => {
+              const obj = {};
+              headers.forEach((h, idx) => obj[h] = (r[idx] ?? "").trim());
+              return obj;
+            })
+            .map(o => {
+              o["_type"] = mapType(o);
+              o["_publish"] = normalizeBool(o["Publish"]);
+              o["_featured"] = normalizeBool(o["Featured"]);
+              o["_order"] = safeNum(o["Order"]);
+              return o;
+            })
+            .filter(o => o["_publish"]);
+
+          objects.sort((a, b) => {
+            if (a["_featured"] !== b["_featured"]) return a["_featured"] ? -1 : 1;
+            if (a["_order"] !== b["_order"]) return a["_order"] - b["_order"];
+            return (a["Title"] || "").localeCompare(b["Title"] || "");
+          });
+
+          allCards = objects.map(makeCard);
+
+          const params = new URLSearchParams(window.location.search);
+
+          const initialType = params.get("type");
+          if (initialType && ["all", "sales", "rentals", "new"].includes(initialType)) {
+            typeSelect.value = initialType;
+          }
+
+          const initialQ =
+          prettyQ ||
+          params.get("q") ||
+          params.get("search") ||
+          params.get("query") ||
+          params.get("location") ||
+          params.get("area") ||
+          params.get("town") ||
+          "";
+
+          if (initialQ) searchInput.value = initialQ;
+
+          render();
+        }
+
+        function render() {
+          const params = new URLSearchParams(window.location.search);
+          const type = typeSelect.value;
+          const sort = sortSelect.value;
+
+          const q = (searchInput.value || "").trim() ||
+                    getParamAny(params, ["q", "search", "query", "location", "area", "town"]);
+
+          const beds = getParamAny(params, ["beds", "bed", "bedrooms", "bedsMin", "minBeds"]);
+
+          const min = getParamAny(params, ["min", "minPrice", "priceMin", "from", "budgetMin"]);
+          const max = getParamAny(params, ["max", "maxPrice", "priceMax", "to", "budgetMax"]);
+
+          let visible = allCards
+            .filter(c => matchesType(c, type))
+            .filter(c => matchesSearch(c, q))
+            .filter(c => matchesBeds(c, beds))
+            .filter(c => matchesMinMax(c, min, max));
+
+          visible = sortCards(visible, sort);
+
+          grid.innerHTML = "";
+          visible.forEach(c => grid.appendChild(c));
+
+          count.innerHTML = `<strong>${visible.length}</strong> Propert${visible.length === 1 ? "y" : "ies"} Found`;
+        }
+
+        // ======================
+        // EVENTS
+        // ======================
+        typeSelect.addEventListener("change", () => {
+          const url = new URL(window.location.href);
+          url.searchParams.set("type", typeSelect.value);
+          window.history.replaceState({}, "", url);
+          render();
+        });
+
+        sortSelect.addEventListener("change", render);
+
+        searchInput.addEventListener("input", () => {
+          setURLParamsFromUI();
+          render();
+        });
+
+        loadSheet();
+      });
+    })();
+    </script>
+
+    <!-- JS (root-relative so it works at /properties) -->
+    <script src="/src/main.js"></script>
+
+  </body>
+</html>
