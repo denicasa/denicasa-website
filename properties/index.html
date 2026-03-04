@@ -514,7 +514,7 @@
           a.dataset.publish = String(row["_publish"] ? "true" : "false");
 
           if (slug) {
-            a.href = `/property/?slug=${encodeURIComponent(slug)}`;
+            a.href = `/property/${encodeURIComponent(slug)}`;
             a.target = "_self";
           } else if (ref) {
             a.href = `/property/?ref=${encodeURIComponent(ref)}`;
