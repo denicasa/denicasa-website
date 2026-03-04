@@ -9,6 +9,23 @@
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   // =========================
+  // Helpers: clean URL builders
+  // =========================
+  const routes = {
+    properties: "/properties",
+    property: (slug) => `/property/${encodeURIComponent(slug)}`,
+    blogs: "/blogs",
+    blog: (slug) => `/blog/${encodeURIComponent(slug)}`,
+  };
+
+  function getPathSlug(expectedBase) {
+    // "/property/360-by-cordia" -> ["property","360-by-cordia"]
+    const parts = window.location.pathname.split("/").filter(Boolean);
+    if (parts[0] === expectedBase && parts[1]) return parts[1];
+    return null;
+  }
+
+  // =========================
   // Find Property Modal
   // =========================
   const openBtn = document.getElementById("openFindModal");
@@ -78,7 +95,8 @@
       if (min) params.set("min", min);
       if (max) params.set("max", max);
 
-      window.location.href = `/properties.html?${params.toString()}`;
+      // ✅ CHANGED: clean route (no .html)
+      window.location.href = `${routes.properties}?${params.toString()}`;
     });
   }
 
@@ -92,14 +110,14 @@
     if (!header || !toggle || !nav) return;
 
     const open = () => {
-      nav.classList.add("is-open");          // <— key
+      nav.classList.add("is-open");
       header.classList.add("nav-open");
       document.body.classList.add("nav-open");
       toggle.setAttribute("aria-expanded", "true");
     };
 
     const close = () => {
-      nav.classList.remove("is-open");       // <— key
+      nav.classList.remove("is-open");
       header.classList.remove("nav-open");
       document.body.classList.remove("nav-open");
       toggle.setAttribute("aria-expanded", "false");
@@ -113,12 +131,10 @@
       isOpen() ? close() : open();
     });
 
-    // close when clicking a link
     nav.addEventListener("click", (e) => {
       if (e.target.closest("a")) close();
     });
 
-    // close when clicking outside nav + toggle
     document.addEventListener("click", (e) => {
       if (!isOpen()) return;
       if (nav.contains(e.target) || toggle.contains(e.target)) return;
@@ -132,8 +148,6 @@
 
   // =========================================================
   // DC SELECT (Reusable Premium Dropdown)
-  // - IMPORTANT: This expects selects with class "dc-native-select"
-  // - Your CSS already hides the native select; JS builds the pill UI.
   // =========================================================
   function closeAllSelects(except) {
     document.querySelectorAll(".dc-select").forEach((w) => {
@@ -148,7 +162,6 @@
   }
 
   function enhanceSelect(nativeSelect) {
-    // Avoid double-enhancing
     if (nativeSelect.closest(".dc-select")) return;
 
     const wrap = document.createElement("div");
@@ -175,7 +188,6 @@
     list.setAttribute("role", "listbox");
     list.hidden = true;
 
-    // Build options
     const opts = Array.from(nativeSelect.options);
 
     opts.forEach((o) => {
@@ -222,7 +234,6 @@
       }
     });
 
-    // Wrap + insert
     nativeSelect.parentNode.insertBefore(wrap, nativeSelect);
     wrap.appendChild(btn);
     wrap.appendChild(list);
@@ -251,7 +262,6 @@
   const areaText = document.getElementById("areaText");
   const areaCta = document.getElementById("areaCta");
 
-  // Only run on pages that actually have the Areas section
   if (
     areaSelect &&
     areaCard &&
@@ -265,7 +275,7 @@
       lalinea: {
         intro:
           "A practical coastal town with direct access to Gibraltar and true year-round living.",
-        title: "La Línea de la Concepción",
+        title: "La Linea de la Concepcion",
         text:
           "La Línea offers an authentic Spanish lifestyle with beaches overlooking Gibraltar, established neighbourhoods and full everyday amenities. It remains active throughout the year rather than seasonal, creating a grounded and community-led atmosphere.",
         text2:
@@ -340,7 +350,7 @@
       },
       benahavis: {
         intro: "Peaceful luxury living surrounded by golf, mountains and privacy.",
-        title: "Benahavís",
+        title: "Benahavis",
         text:
           "Benahavís is characterised by gated communities, panoramic mountain views and high-quality residential developments just inland from the coast. The village itself retains charm and a reputation for fine dining.",
         text2:
@@ -378,14 +388,15 @@
       const a = areas[key];
       if (!a) return;
 
-      // Fill text WITHOUT nested <p> problems
       areaKicker.textContent = a.intro;
       areaTitle.textContent = a.title;
       areaIntro.textContent = a.text;
       areaText.textContent = a.text2;
 
       areaCta.textContent = `View properties in ${a.title}`;
-      areaCta.href = `./properties.html?type=all&q=${encodeURIComponent(a.title)}`;
+
+      // ✅ CHANGED: clean route (no .html)
+      areaCta.href = `${routes.properties}?type=all&q=${encodeURIComponent(a.title)}`;
 
       areaCard.hidden = false;
       requestAnimationFrame(() => areaCard.classList.add("is-visible"));
@@ -394,5 +405,10 @@
     areaSelect.addEventListener("change", (e) => showArea(e.target.value));
   }
 
+  // =========================================================
+  // OPTIONAL: expose helpers if you want to use them elsewhere
+  // =========================================================
+  window.__dcRoutes = routes;
+  window.__dcGetPathSlug = getPathSlug;
 })();
 
