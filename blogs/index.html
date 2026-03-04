@@ -643,7 +643,7 @@
       const cat = p.category || "normal";
       const label = categoryLabel(cat);
       const classes = ["blog-card", `blog-card--${cat}`, isFeatured ? "blog-card--featured" : ""].filter(Boolean).join(" ");
-      const href = `/blog/?slug=${encodeURIComponent(p.slug)}`;
+      const href = `/blog/${encodeURIComponent(p.slug)}`;
 
       const media = p.cover_image
         ? `<div class="blog-card__media"><img loading="lazy" src="${p.cover_image}" alt="${safeText(p.title)}"></div>`
