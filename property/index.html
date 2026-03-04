@@ -878,32 +878,53 @@
     // CONFIG (same sheet as properties.html)
     // ======================
     const SHEET_ID = "1Bzd-k17JMPau7_uGuxW8PUsTpHUl_JpOykHPp9hOFjQ";
-    const SHEET_NAME = "properties";
-    const CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(SHEET_NAME)}`;
+  const SHEET_NAME = "properties";
+  const CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(SHEET_NAME)}`;
 
-    // Identify the property using ?slug= (preferred) OR ?ref= OR ?id= OR ?title=
-    const params = new URLSearchParams(window.location.search);
-    const SLUG  = (params.get("slug")  || "").trim();
-    const REF   = (params.get("ref")   || "").trim();
-    const ID    = (params.get("id")    || "").trim();
-    const TITLE = (params.get("title") || "").trim();
+  // ======================
+  // Identify the property
+  // Supports:
+  //  - /property/?slug=abc
+  //  - /property/abc
+  //  - /property/?ref=xxx etc
+  // ======================
 
-    const els = {
-      title: document.getElementById("propTitle"),
-      meta: document.getElementById("propMeta"),
-      category: document.getElementById("propCategory"),
-      location: document.getElementById("propLocation"),
-      ref: document.getElementById("propRef"),
-      mainImg: document.getElementById("mainImg"),
-      thumbs: document.getElementById("thumbs"),
-      price: document.getElementById("propPrice"),
-      facts: document.getElementById("propFacts"),
-      desc: document.getElementById("propDesc"),
-      featuresWrap: document.getElementById("featuresWrap"),
-      features: document.getElementById("propFeatures"),
-      wa: document.getElementById("ctaWhatsApp"),
-      email: document.getElementById("ctaEmail"),
-    };
+  function getSlugFromPath() {
+    // pathname examples:
+    //  /property
+    //  /property/
+    //  /property/360-by-cordia
+    const parts = window.location.pathname.split("/").filter(Boolean);
+    const propertyIndex = parts.indexOf("property");
+    if (propertyIndex === -1) return "";
+    const maybeSlug = parts[propertyIndex + 1] || "";
+    return maybeSlug ? decodeURIComponent(maybeSlug).trim() : "";
+  }
+
+  const params = new URLSearchParams(window.location.search);
+
+  const SLUG  = (params.get("slug") || getSlugFromPath() || "").trim();
+
+  const REF   = (params.get("ref")   || "").trim();
+  const ID    = (params.get("id")    || "").trim();
+  const TITLE = (params.get("title") || "").trim();
+
+  const els = {
+    title: document.getElementById("propTitle"),
+    meta: document.getElementById("propMeta"),
+    category: document.getElementById("propCategory"),
+    location: document.getElementById("propLocation"),
+    ref: document.getElementById("propRef"),
+    mainImg: document.getElementById("mainImg"),
+    thumbs: document.getElementById("thumbs"),
+    price: document.getElementById("propPrice"),
+    facts: document.getElementById("propFacts"),
+    desc: document.getElementById("propDesc"),
+    featuresWrap: document.getElementById("featuresWrap"),
+    features: document.getElementById("propFeatures"),
+    wa: document.getElementById("ctaWhatsApp"),
+    email: document.getElementById("ctaEmail"),
+  };
 
     function parseCSV(text) {
       const rows = [];
