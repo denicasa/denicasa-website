@@ -1,14 +1,6 @@
 {
   "rewrites": [
-    {
-      "source": "/property/:slug",
-      "destination": "/property/?slug=:slug"
-    }
-  ]
-}
-{
-  "rewrites": [
-    { "source": "/blog/:slug", "destination": "/blog/?slug=:slug" },
-    { "source": "/blog/:slug/", "destination": "/blog/?slug=:slug" }
+    { "source": "/property/:slug", "destination": "/property/?slug=:slug" },
+    { "source": "/blog/:slug", "destination": "/blog/?slug=:slug" }
   ]
 }
