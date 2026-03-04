@@ -6,3 +6,9 @@
     }
   ]
 }
+{
+  "rewrites": [
+    { "source": "/blog/:slug", "destination": "/blog/?slug=:slug" },
+    { "source": "/blog/:slug/", "destination": "/blog/?slug=:slug" }
+  ]
+}
