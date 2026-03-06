@@ -3343,7 +3343,7 @@ a:hover{ opacity: .92; }
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,.10);
+    background: rgba(0,0,0,.28);
     z-index: 9998;
   }
 }
