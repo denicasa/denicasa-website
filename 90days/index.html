@@ -294,7 +294,9 @@
 
             <!-- RIGHT FORM -->
             <div class="enquiry-card">
-              <form id="seller90Form" class="enquiry-form">
+              <form id="seller90Form" class="enquiry-form" action="https://formspree.io/f/myknnpyb" method="POST">
+                <input type="hidden" name="form_source" value="90 Day Seller Page">
+                <input type="hidden" name="_subject" value="New 90 Day Seller Enquiry - Deni Casa">
                 <input type="hidden" name="type" value="Campaign" />
 
                 <!-- Property Type -->
@@ -523,53 +525,6 @@
           if (!isOther) input.value = "";
         });
       }
-
-      form.addEventListener("submit", async (e) => {
-        e.preventDefault();
-        responseEl.textContent = "";
-        submitBtn.disabled = true;
-        submitBtn.style.opacity = "0.85";
-
-        const tipo = form.tipo_propiedad.value;
-        const otraTipo = (form.tipo_propiedad_otra?.value || "").trim();
-        const ubicacion = form.ubicacion.value;
-        const otraUbicacion = (form.ubicacion_otra?.value || "").trim();
-
-        const data = {
-          type: "Campaign",
-          buying_selling: "Selling",
-          property_type: (tipo === "Other" && otraTipo) ? `Other (${otraTipo})` : tipo,
-          price_range: form.precio_deseado.value,
-          bedrooms: form.dormitorios.value,
-          bathrooms: form.banos.value,
-          location: (ubicacion === "Other" && otraUbicacion) ? otraUbicacion : ubicacion,
-          first_name: form.nombre.value,
-          last_name: form.apellido.value,
-          email: form.email.value,
-          phone: form.telefono.value,
-          message: form.mensaje.value
-        };
-
-        try {
-          const body = new URLSearchParams(data);
-
-          await fetch(SCRIPT_URL, {
-            method: "POST",
-            mode: "no-cors",
-            body
-          });
-
-          responseEl.textContent = "✅ Submitted successfully!";
-          form.reset();
-          typeOtherBox.hidden = true;
-          locationOtherBox.hidden = true;
-        } catch (err) {
-          responseEl.textContent = "⚠️ There was an error submitting the form.";
-        } finally {
-          submitBtn.disabled = false;
-          submitBtn.style.opacity = "1";
-        }
-      });
     })();
     </script>
 
