@@ -2539,6 +2539,10 @@ a:hover{ opacity: .92; }
   padding: 16px;
 }
 
+.enquiry-form{
+  padding: 0 28px 24px;
+}
+
 /* -------------------------
    PREMIUM RADIO (NO MINI CARDS)
    (keeps fieldset as the single card)
