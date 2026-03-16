@@ -532,13 +532,13 @@
       };
 
       try {
-        const res = await fetch(SCRIPT_URL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data)
-        });
+        const body = new URLSearchParams(data);
 
-        await res.json().catch(() => ({}));
+        await fetch(SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          body
+        });
 
         if (responseEl) responseEl.textContent = "✅ Enquiry sent successfully!";
         form.reset();
@@ -546,6 +546,7 @@
         if (otherPropertyBox) otherPropertyBox.hidden = true;
         if (otherLocationBox) otherLocationBox.hidden = true;
         if (priceLabel) priceLabel.textContent = "Maximum Budget";
+
       } catch (err) {
         if (responseEl) responseEl.textContent = "⚠️ There was an error sending your enquiry.";
       } finally {
