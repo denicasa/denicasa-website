@@ -293,136 +293,128 @@
             </aside>
 
             <!-- RIGHT FORM -->
-            <div class="enquiry-card">
-              <form id="seller90Form" class="enquiry-form" action="https://formspree.io/f/myknnpyb" method="POST">
-                <input type="hidden" name="form_source" value="90 Day Seller Page">
-                <input type="hidden" name="_subject" value="New 90 Day Seller Enquiry - Deni Casa">
-                <input type="hidden" name="type" value="Campaign" />
+            <form id="seller90Form" class="enquiry-form" action="https://formspree.io/f/myknnpyb" method="POST">
+  <input type="hidden" name="form_source" value="90 Day Seller Page">
+  <input type="hidden" name="_subject" value="New 90 Day Seller Enquiry - Deni Casa">
+  <input type="hidden" name="type" value="Campaign">
 
-                <!-- Property Type -->
-                <fieldset class="enquiry-group">
-                  <legend class="enquiry-legend">Property type</legend>
-                  <div class="enquiry-radio">
-                    <label><input type="radio" name="tipo_propiedad" value="Villa" required /> Villa</label>
-                    <label><input type="radio" name="tipo_propiedad" value="Apartment" /> Apartment</label>
-                    <label><input type="radio" name="tipo_propiedad" value="Townhouse" /> Townhouse</label>
-                    <label><input type="radio" name="tipo_propiedad" value="Plot" /> Plot / Land</label>
-                    <label><input type="radio" name="tipo_propiedad" value="Other" id="sellerTypeOther" /> Other</label>
-                  </div>
+  <fieldset class="enquiry-group">
+    <legend class="enquiry-legend">Property type</legend>
+    <div class="enquiry-radio">
+      <label><input type="radio" name="property_type" value="Villa" required> Villa</label>
+      <label><input type="radio" name="property_type" value="Apartment"> Apartment</label>
+      <label><input type="radio" name="property_type" value="Townhouse"> Townhouse</label>
+      <label><input type="radio" name="property_type" value="Plot"> Plot / Land</label>
+      <label><input type="radio" name="property_type" value="Other" id="sellerTypeOther"> Other</label>
+    </div>
 
-                  <div id="sellerTypeOtherBox" class="enquiry-inline" hidden>
-                    <label class="field">
-                      Please specify
-                      <input type="text" name="tipo_propiedad_otra" placeholder="e.g. Country home, commercial unit..." />
-                    </label>
-                  </div>
-                </fieldset>
+    <div id="sellerTypeOtherBox" class="enquiry-inline" hidden>
+      <label class="field">
+        Please specify
+        <input type="text" name="property_type_other" placeholder="e.g. Country home, commercial unit...">
+      </label>
+    </div>
+  </fieldset>
 
-                <!-- Desired Price -->
-                <label class="field">
-                  Desired price
-                  <input type="text" name="precio_deseado" placeholder="150,000 €" required />
-                </label>
+  <label class="field">
+    Desired price
+    <input type="text" name="price_range" placeholder="150,000 €" required>
+  </label>
 
-                <!-- Beds / Baths -->
-                <div class="enquiry-grid">
-                  <label class="field">
-                    Bedrooms
-                    <select name="dormitorios" class="dc-native-select" required>
-                      <option value="">Select...</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5+">5+</option>
-                    </select>
-                  </label>
+  <div class="enquiry-grid">
+    <label class="field">
+      Bedrooms
+      <select name="bedrooms" class="dc-native-select" required>
+        <option value="">Select...</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5+">5+</option>
+      </select>
+    </label>
 
-                  <label class="field">
-                    Bathrooms
-                    <select name="banos" class="dc-native-select" required>
-                      <option value="">Select...</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4+">4+</option>
-                    </select>
-                  </label>
-                </div>
+    <label class="field">
+      Bathrooms
+      <select name="bathrooms" class="dc-native-select" required>
+        <option value="">Select...</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4+">4+</option>
+      </select>
+    </label>
+  </div>
 
-                <!-- Location -->
-                <label class="field">
-                  Location
-                  <select name="ubicacion" id="sellerLocationSelect" class="dc-native-select" required>
-                    <option value="">Select...</option>
-                    <option value="Alcaidesa">Alcaidesa</option>
-                    <option value="Algeciras">Algeciras</option>
-                    <option value="Benahavis">Benahavis</option>
-                    <option value="Casares">Casares</option>
-                    <option value="Duquesa">Duquesa</option>
-                    <option value="Estepona">Estepona</option>
-                    <option value="Fuengirola">Fuengirola</option>
-                    <option value="La Linea de la Concepcion">La Linea de la Concepcion</option>
-                    <option value="Malaga">Malaga</option>
-                    <option value="Manilva">Manilva</option>
-                    <option value="Marbella">Marbella</option>
-                    <option value="Mijas">Mijas</option>
-                    <option value="Pueblo de Guadiaro">Pueblo de Guadiaro</option>
-                    <option value="San Roque">San Roque</option>
-                    <option value="Campo de Gibraltar">Campo de Gibraltar</option>
-                    <option value="Santa Margarita">Santa Margarita</option>
-                    <option value="Sotogrande">Sotogrande</option>
-                    <option value="Tolox">Tolox</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </label>
+  <label class="field">
+    Location
+    <select name="location" id="sellerLocationSelect" class="dc-native-select" required>
+      <option value="">Select...</option>
+      <option value="Alcaidesa">Alcaidesa</option>
+      <option value="Algeciras">Algeciras</option>
+      <option value="Benahavis">Benahavis</option>
+      <option value="Casares">Casares</option>
+      <option value="Duquesa">Duquesa</option>
+      <option value="Estepona">Estepona</option>
+      <option value="Fuengirola">Fuengirola</option>
+      <option value="La Linea de la Concepcion">La Linea de la Concepcion</option>
+      <option value="Malaga">Malaga</option>
+      <option value="Manilva">Manilva</option>
+      <option value="Marbella">Marbella</option>
+      <option value="Mijas">Mijas</option>
+      <option value="Pueblo de Guadiaro">Pueblo de Guadiaro</option>
+      <option value="San Roque">San Roque</option>
+      <option value="Campo de Gibraltar">Campo de Gibraltar</option>
+      <option value="Santa Margarita">Santa Margarita</option>
+      <option value="Sotogrande">Sotogrande</option>
+      <option value="Tolox">Tolox</option>
+      <option value="Other">Other</option>
+    </select>
+  </label>
 
-                <div id="sellerLocationOtherBox" class="enquiry-inline" hidden>
-                  <label class="field">
-                    Please specify location
-                    <input type="text" name="ubicacion_otra" placeholder="Please specify city..." />
-                  </label>
-                </div>
+  <div id="sellerLocationOtherBox" class="enquiry-inline" hidden>
+    <label class="field">
+      Please specify location
+      <input type="text" name="location_other" placeholder="Please specify city...">
+    </label>
+  </div>
 
-                <!-- Name -->
-                <div class="enquiry-grid">
-                  <label class="field">
-                    First name
-                    <input type="text" name="nombre" placeholder="First name" required />
-                  </label>
+  <div class="enquiry-grid">
+    <label class="field">
+      First name
+      <input type="text" name="first_name" placeholder="First name" required>
+    </label>
 
-                  <label class="field">
-                    Last name
-                    <input type="text" name="apellido" placeholder="Last name" required />
-                  </label>
-                </div>
+    <label class="field">
+      Last name
+      <input type="text" name="last_name" placeholder="Last name" required>
+    </label>
+  </div>
 
-                <!-- Email / Phone -->
-                <div class="enquiry-grid">
-                  <label class="field">
-                    Email
-                    <input type="email" name="email" placeholder="you@email.com" required />
-                  </label>
+  <div class="enquiry-grid">
+    <label class="field">
+      Email
+      <input type="email" name="email" placeholder="you@email.com" required>
+    </label>
 
-                  <label class="field">
-                    Phone (optional)
-                    <input type="tel" name="telefono" placeholder="+34 600 123 456" />
-                  </label>
-                </div>
+    <label class="field">
+      Phone (optional)
+      <input type="tel" name="phone" placeholder="+34 600 123 456">
+    </label>
+  </div>
 
-                <!-- Message -->
-                <label class="field">
-                  Message / additional details
-                  <textarea name="mensaje" rows="5" placeholder="Example: timeline, condition, mortgage status, key features..."></textarea>
-                </label>
+  <label class="field">
+    Message / additional details
+    <textarea name="message" rows="5" placeholder="Example: timeline, condition, mortgage status, key features..."></textarea>
+  </label>
 
-                <div class="enquiry-actions">
-                  <button class="btn btn-primary" type="submit" id="sellerSubmit">Submit</button>
-                  <a class="btn btn-ghost" href="https://wa.me/34604110306" target="_blank" rel="noreferrer">WhatsApp</a>
-                </div>
+  <div class="enquiry-actions">
+    <button class="btn btn-primary" type="submit" id="sellerSubmit">Submit</button>
+    <a class="btn btn-ghost" href="https://wa.me/34604110306" target="_blank" rel="noreferrer">WhatsApp</a>
+  </div>
 
-                <p id="sellerResponse" class="enquiry-response" aria-live="polite"></p>
-              </form>
+  <p id="sellerResponse" class="enquiry-response" aria-live="polite"></p>
+</form>
             </div>
           </div>
         </div>
@@ -493,40 +485,35 @@
     </footer>
 
     <script>
-    (() => {
-      const form = document.getElementById("seller90Form");
-      if (!form) return;
+(() => {
+  const form = document.getElementById("seller90Form");
+  if (!form) return;
 
-      const responseEl = document.getElementById("sellerResponse");
-      const submitBtn = document.getElementById("sellerSubmit");
+  const typeOtherBox = document.getElementById("sellerTypeOtherBox");
+  const locationOtherBox = document.getElementById("sellerLocationOtherBox");
 
-      const typeOtherBox = document.getElementById("sellerTypeOtherBox");
-      const locationOtherBox = document.getElementById("sellerLocationOtherBox");
+  document.querySelectorAll('input[name="property_type"]').forEach(r => {
+    r.addEventListener("change", () => {
+      const isOther = r.checked && r.value === "Other";
+      typeOtherBox.hidden = !isOther;
+      const input = typeOtherBox.querySelector("input");
+      input.required = isOther;
+      if (!isOther) input.value = "";
+    });
+  });
 
-      const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyzsPI5olJtyHprnRmFHi7unmjNF9E-AqNK-DTPxTiAy1WYptEUBAy5KOjikZ8_Sc2xCg/exec";
-
-      document.querySelectorAll('input[name="tipo_propiedad"]').forEach(r => {
-        r.addEventListener("change", () => {
-          const isOther = r.checked && r.value === "Other";
-          typeOtherBox.hidden = !isOther;
-          const input = typeOtherBox.querySelector("input");
-          input.required = isOther;
-          if (!isOther) input.value = "";
-        });
-      });
-
-      const locSelect = document.getElementById("sellerLocationSelect");
-      if (locSelect) {
-        locSelect.addEventListener("change", () => {
-          const isOther = locSelect.value === "Other";
-          locationOtherBox.hidden = !isOther;
-          const input = locationOtherBox.querySelector("input");
-          input.required = isOther;
-          if (!isOther) input.value = "";
-        });
-      }
-    })();
-    </script>
+  const locSelect = document.getElementById("sellerLocationSelect");
+  if (locSelect) {
+    locSelect.addEventListener("change", () => {
+      const isOther = locSelect.value === "Other";
+      locationOtherBox.hidden = !isOther;
+      const input = locationOtherBox.querySelector("input");
+      input.required = isOther;
+      if (!isOther) input.value = "";
+    });
+  }
+})();
+</script>
 
     <!-- JS (root-relative so it works at /90days) -->
     <script src="/src/main.js"></script>
