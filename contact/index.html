@@ -231,9 +231,10 @@
           </aside>
 
           <!-- RIGHT FORM -->
-          <div class="enquiry-card">
-            <form id="enquiryForm" class="enquiry-form">
+          <form id="enquiryForm" class="enquiry-form" action="https://formspree.io/f/myknnpyb" method="POST">
+            <input type="hidden" name="form_source" value="Contact Page">
               <input type="hidden" name="type" value="General" />
+               <input type="hidden" name="_subject" value="New Contact Enquiry - Deni Casa">
 
               <!-- Buying or Selling -->
               <fieldset class="enquiry-group">
@@ -496,65 +497,6 @@
           ? "Maximum Budget"
           : "Expected Sale Price";
       });
-    });
-
-    // Submit -> Apps Script
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      if (responseEl) responseEl.textContent = "";
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.style.opacity = "0.85";
-      }
-
-      const purposeValue =
-        document.querySelector('input[name="purpose"]:checked')?.value || "";
-
-      const propertyType = form.property_type?.value || "";
-      const propertyOther = (form.property_other?.value || "").trim();
-
-      const location = form.location?.value || "";
-      const locationOther = (form.location_other?.value || "").trim();
-
-      const data = {
-        type: form.type?.value || "",
-        buying_selling: purposeValue,
-        property_type: (propertyType === "Other" && propertyOther) ? `Other (${propertyOther})` : propertyType,
-        price_range: form.price_range?.value || "",
-        bedrooms: form.bedrooms?.value || "",
-        bathrooms: form.bathrooms?.value || "",
-        location: (location === "Other" && locationOther) ? locationOther : location,
-        first_name: form.first_name?.value || "",
-        last_name: form.last_name?.value || "",
-        email: form.email?.value || "",
-        phone: form.phone?.value || "",
-        message: form.message?.value || ""
-      };
-
-      try {
-        const body = new URLSearchParams(data);
-
-        await fetch(SCRIPT_URL, {
-          method: "POST",
-          mode: "no-cors",
-          body
-        });
-
-        if (responseEl) responseEl.textContent = "✅ Enquiry sent successfully!";
-        form.reset();
-
-        if (otherPropertyBox) otherPropertyBox.hidden = true;
-        if (otherLocationBox) otherLocationBox.hidden = true;
-        if (priceLabel) priceLabel.textContent = "Maximum Budget";
-
-      } catch (err) {
-        if (responseEl) responseEl.textContent = "⚠️ There was an error sending your enquiry.";
-      } finally {
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.style.opacity = "1";
-        }
-      }
     });
   })();
   </script>
